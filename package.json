@@ -1,0 +1,41 @@
+{
+  "name": "traffic-ai",
+  "version": "0.6.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:http": "tsx --test tests/http/auth.integration.ts",
+    "seed:admin": "node --env-file-if-exists=.env.local --import tsx scripts/seed-admin.ts",
+    "prepare:meta": "node --env-file-if-exists=.env.local --import tsx scripts/prepare-meta.ts",
+    "worker:crm": "node --env-file-if-exists=.env.local --import tsx scripts/crm-worker.ts",
+    "worker:intelligence": "node --env-file-if-exists=.env.local --import tsx scripts/intelligence-worker.ts"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "server-only": "0.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.0",
+    "typescript": "^5.9.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.0.0",
+    "tsx": "^4.0.0"
+  }
+}

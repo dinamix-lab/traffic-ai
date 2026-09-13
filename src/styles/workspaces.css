@@ -1,0 +1,214 @@
+.workspace-switcher .workspace {
+  gap: 9px;
+}
+.workspace-switcher .workspace > div {
+  min-width: 0;
+  flex: 1;
+}
+.workspace select {
+  width: 100%;
+  color: #ecedf4;
+  background: #202437;
+  border: 0;
+  border-radius: 4px;
+  font-size: 13px;
+  padding: 3px 0;
+  outline-offset: 3px;
+}
+.workspace option {
+  background: #202437;
+  color: #fff;
+}
+.workspace-error {
+  color: #e6b1a4;
+  font-size: 11px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+.workspace-modal-body {
+  padding: 0 25px 24px;
+}
+.workspace-modal-body fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.workspace-modal-body textarea {
+  resize: vertical;
+  font: inherit;
+}
+.workspace-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 20px 24px 28px;
+}
+.workspace-facts dt {
+  color: #969aad;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.workspace-facts dd {
+  margin: 0;
+  font-size: 14px;
+  color: #5e6075;
+  overflow-wrap: anywhere;
+}
+.workspace-team {
+  margin-top: 22px;
+}
+.workspace-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  padding: 20px 24px;
+}
+.workspace-members label,
+.workspace-check {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  color: #676780;
+}
+.workspace-members input,
+.workspace-check input {
+  accent-color: #7563df;
+  width: 16px;
+  height: 16px;
+}
+.workspace-detail-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.workspace-team-title {
+  margin: 22px 0 0;
+}
+.workspace-modal-body .workspace-members {
+  padding: 16px 0;
+}
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.integration-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.integration-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 17px;
+}
+.integration-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #edf0fc;
+  color: #7682ba;
+  display: grid;
+  place-items: center;
+}
+.integration-logo.meta {
+  font-size: 42px;
+  line-height: 1;
+  color: #2789df;
+  background: #eaf4fd;
+}
+.integration-logo.crm {
+  color: #7f68c8;
+  background: #f0eafa;
+}
+.integration-logo.whatsapp {
+  color: #389478;
+  background: #eaf8f1;
+}
+.integration-logo.analytics {
+  color: #ca9545;
+  background: #fff5e5;
+}
+.integration-card h2 {
+  font-size: 18px;
+}
+.integration-card > p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 9px 0 22px;
+}
+.integration-facts {
+  width: 100%;
+  margin: 0 0 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+}
+.integration-facts > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+  padding: 5px 0;
+}
+.integration-facts dt {
+  color: #9198a8;
+}
+.integration-facts dd {
+  margin: 0;
+  color: #61677d;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.integration-actions {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  width: 100%;
+}
+.integration-actions > .text-link {
+  flex-basis: 100%;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.integration-modal-copy {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+.account-external {
+  display: block;
+  color: #9298a8;
+  font-size: 11px;
+  margin-top: 4px;
+}
+@media (max-width: 760px) {
+  .integration-grid {
+    grid-template-columns: 1fr;
+  }
+  .workspace-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .workspace-modal-body {
+    padding: 0 18px 20px;
+  }
+  .integration-card {
+    padding: 20px;
+  }
+  .workspace-team .form-footer {
+    flex-wrap: wrap;
+  }
+}
+
+.integration-card + .integration-grid { margin-top: 20px; }
+
+.business-stats { grid-template-columns: repeat(auto-fit,minmax(170px,1fr)); margin-top: 20px; }
+.revenue-funnel {list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;}
+.revenue-funnel li {background:var(--bg,#f6f7fb);padding:20px;border:1px solid #e8e8ef;border-radius:12px;display:flex;flex-direction:column;gap:12px;}
+.integration-card + .integration-card {margin-top:20px;}
